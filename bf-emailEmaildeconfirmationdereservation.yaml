@@ -1,0 +1,44 @@
+openapi: 3.0.1
+info:
+  title: BF - emailEmaildeconfirmationdereservation
+  description: This is the API spec for the Backendflow API. It is generated
+    automatically by Backendflow.
+  version: v1
+servers:
+  - url: https://api.backendflow.io/v1
+paths:
+  "/email?templateId=LFc2ALzZK0OYoHYbXQfm&to={to}&subject={subject}&attachmentLink={attachmentLink}&attachmentName={attachmentName}":
+    post:
+      operationId: emailEmaildeconfirmationdereservation
+      summary: Send an email using the "Email de confirmation de reservation"
+        template. Returns Success if the email was sent successfully.
+      parameters:
+        - name: to
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: subject
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: attachmentLink
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: attachmentName
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sk-bf-10c432d2-d23d-4af4-ad1d-0302f0836a64:
+                  type: string
